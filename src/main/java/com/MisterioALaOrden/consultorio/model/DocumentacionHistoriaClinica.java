@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -30,7 +31,7 @@ public class DocumentacionHistoriaClinica implements Serializable{
 	@Column(name = "cedulaMedico", length = 20)
 	private String cedulaMedico;
 	
-	@ManyToOne
+	@OneToOne
     @JoinColumn(name = "incapacidad")
 	private Incapacidad incapacidad;
 	
@@ -38,11 +39,11 @@ public class DocumentacionHistoriaClinica implements Serializable{
     @JoinColumn(name = "cita")
 	private Cita cita;
 	
-	@ManyToOne
+	@OneToOne
     @JoinColumn(name = "formulaMedica")
 	private FormulaMedica formulaMedica;
 	
-	@ManyToOne
+	@OneToOne
     @JoinColumn(name = "orden")
 	private Orden orden;
 
