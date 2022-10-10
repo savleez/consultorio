@@ -32,6 +32,51 @@ public class Medicamentos implements Serializable{
 	
 	@Column(name = "existencias", length = 45)
 	private int existencias;
+
+	public Medicamentos() {
+	}
+
+	public Integer getIdMedicamentos() {
+		return idMedicamentos;
+	}
+
+	public void setIdMedicamentos(Integer idMedicamentos) {
+		this.idMedicamentos = idMedicamentos;
+	}
+
+	public String getNombreMedicamento() {
+		return nombreMedicamento;
+	}
+
+	public void setNombreMedicamento(String nombreMedicamento) {
+		this.nombreMedicamento = nombreMedicamento;
+	}
+
+	public String getLaboratorio() {
+		return laboratorio;
+	}
+
+	public void setLaboratorio(String laboratorio) {
+		this.laboratorio = laboratorio;
+	}
+
+	public float getPrecioUnitario() {
+		return precioUnitario;
+	}
+
+	public void setPrecioUnitario(float precioUnitario) {
+		this.precioUnitario = precioUnitario;
+	}
+
+	public int getExistencias() {
+		return existencias;
+	}
+
+	public void setExistencias(int existencias) {
+		this.existencias = existencias;
+	}
+	
+	
 	
 
 

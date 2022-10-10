@@ -26,7 +26,7 @@ public class DetalleFormulasMedicasImpl implements DetalleFormulasMedicasService
 
 	@Override
 	@Transactional
-	public Optional<DetalleFormulasMedicas> consultarDetalleFormulasMedicasPorId(DetalleFormulasMedicasId id) {
+	public Optional<DetalleFormulasMedicas> consultarDetalleFormulasMedicasPorId(Integer id) {
 		Optional<DetalleFormulasMedicas> respDetalleFormulasMedicas = this.DetalleFormulasMedicasRepository.findById(id);
 		return respDetalleFormulasMedicas;
 	}
@@ -40,7 +40,7 @@ public class DetalleFormulasMedicasImpl implements DetalleFormulasMedicasService
 
 	@Override
 	@Transactional
-	public void eliminarDetalleFormulasMedicas(DetalleFormulasMedicasId id) {
+	public void eliminarDetalleFormulasMedicas(Integer id) {
 		this.DetalleFormulasMedicasRepository.deleteById(id);
 	}
 

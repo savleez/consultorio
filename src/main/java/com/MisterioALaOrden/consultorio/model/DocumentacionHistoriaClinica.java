@@ -40,8 +40,8 @@ public class DocumentacionHistoriaClinica implements Serializable{
 	private Cita cita;
 	
 	@OneToOne
-    @JoinColumn(name = "formulaMedica")
-	private FormulaMedica formulaMedica;
+    @JoinColumn(name = "formulasMedicas")
+	private FormulasMedicas formulasMedicas;
 	
 	@OneToOne
     @JoinColumn(name = "orden")
@@ -90,12 +90,12 @@ public class DocumentacionHistoriaClinica implements Serializable{
 		this.cita = cita;
 	}
 
-	public FormulaMedica getFormulaMedica() {
-		return formulaMedica;
+	public FormulasMedicas getFormulasMedicas() {
+		return formulasMedicas;
 	}
 
-	public void setFormulaMedica(FormulaMedica formulaMedica) {
-		this.formulaMedica = formulaMedica;
+	public void setFormulasMedicas(FormulasMedicas formulasMedicas) {
+		this.formulasMedicas = formulasMedicas;
 	}
 
 	public Orden getOrden() {

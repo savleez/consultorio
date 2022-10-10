@@ -8,8 +8,8 @@ import com.MisterioALaOrden.consultorio.model.DetalleFormulasMedicasId;
 
 public interface DetalleFormulasMedicasService {
 	public List<DetalleFormulasMedicas> consultarDetalleFormulasMedicas();
-	public Optional<DetalleFormulasMedicas> consultarDetalleFormulasMedicasPorId(DetalleFormulasMedicasId idDetalleFormulaMedica);
+	public Optional<DetalleFormulasMedicas> consultarDetalleFormulasMedicasPorId(Integer idDetalleFormulaMedica);
 	public DetalleFormulasMedicas guardarDetalleFormulasMedicas(DetalleFormulasMedicas DetalleformulaMedica);
-	public void eliminarDetalleFormulasMedicas(DetalleFormulasMedicasId idDetalleFormulaMedica);
+	public void eliminarDetalleFormulasMedicas(Integer idDetalleFormulaMedica);
 
 }

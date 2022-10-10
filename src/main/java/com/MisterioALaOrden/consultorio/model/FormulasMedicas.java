@@ -24,12 +24,19 @@ public class FormulasMedicas implements Serializable {
 	private Integer idFormulasMedicas;
 	
 	
-	@Column(name = "fechaHoraCreacion")
+	@Column(name = "vigenciaFormula")
 	private Date vigenciaFormula;
 	
 	
 	@Column(name = "estado", length = 45)
 	private String estado;
+
+
+	
+	
+	
+	public FormulasMedicas() {
+	}
 
 
 	public Integer getIdFormulasMedicas() {

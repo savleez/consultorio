@@ -13,7 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@IdClass(value = DetalleFormulasMedicasId.class)
+//@IdClass(value = DetalleFormulasMedicasId.class)
 @Entity
 @Table(name = "DetalleFormulasMedicas")
 public class DetalleFormulasMedicas implements Serializable {
@@ -23,12 +23,14 @@ public class DetalleFormulasMedicas implements Serializable {
 	private static final long serialVersionUID = 1176722169188440862L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
 	@ManyToOne
 	@JoinColumn(name="FormulasMedicas")
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private FormulasMedicas FormulasMedicas;
 
-	@Id
 	@ManyToOne
 	@JoinColumn(name="Medicamentos")
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
