@@ -29,7 +29,7 @@ public class DetalleFormulasMedicasController {
 		List<DetalleFormulasMedicas> listaDetalleFormulasMedicas = this.DetalleFormulasMedicasService.consultarDetalleFormulasMedicas();
 		return ResponseEntity.ok(listaDetalleFormulasMedicas);
 	}
-	/*
+	
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getDetalleFormulasMedicasPorId(@PathVariable Integer id){
@@ -40,7 +40,7 @@ public class DetalleFormulasMedicasController {
 			return ResponseEntity.notFound().build();
 		}
 	}
-	*/
+	
 	
 	
 	@PostMapping
@@ -48,7 +48,7 @@ public class DetalleFormulasMedicasController {
 		DetalleFormulasMedicas newDetalleFormulasMedicas = this.DetalleFormulasMedicasService.guardarDetalleFormulasMedicas(DetalleFormulasMedicas);
 		return ResponseEntity.status(HttpStatus.CREATED).body(newDetalleFormulasMedicas);
 	}
-	/*
+	
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<?> updateDetalleFormulasMedicas(@RequestBody DetalleFormulasMedicas DetalleFormulasMedicas, @PathVariable Integer id){
@@ -61,16 +61,16 @@ public class DetalleFormulasMedicasController {
 	}
 	
 	
-	@DeleteMapping("/{DetalleFormulasMedicasId}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteDetalleFormulasMedicas(@PathVariable Integer id){
-		Optional<DetalleFormulasMedicas> respDetalleFormulasMedicas = this.DetalleFormulasMedicasService.consultarDetalleFormulasMedicasPorId(DetalleFormulasMedicasId);
+		Optional<DetalleFormulasMedicas> respDetalleFormulasMedicas = this.DetalleFormulasMedicasService.consultarDetalleFormulasMedicasPorId(id);
 		if(respDetalleFormulasMedicas.isPresent()) {
-			this.DetalleFormulasMedicasService.eliminarDetalleFormulasMedicas(null);
+			this.DetalleFormulasMedicasService.eliminarDetalleFormulasMedicas(id);
 			return ResponseEntity.ok().build();
 		} else {
 			return ResponseEntity.notFound().build();			
 		}
 	}
-	*/
+	
 
 }

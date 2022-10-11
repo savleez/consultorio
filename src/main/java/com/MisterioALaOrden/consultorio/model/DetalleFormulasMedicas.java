@@ -40,40 +40,57 @@ public class DetalleFormulasMedicas implements Serializable {
 	private String comentarios;
 
 	
+	
+	public DetalleFormulasMedicas() {
+	}
+
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
 
 	public FormulasMedicas getFormulasMedicas() {
 		return FormulasMedicas;
 	}
 
+
+
 	public void setFormulasMedicas(FormulasMedicas formulasMedicas) {
 		FormulasMedicas = formulasMedicas;
 	}
+
+
 
 	public Medicamentos getMedicamentos() {
 		return Medicamentos;
 	}
 
+
+
 	public void setMedicamentos(Medicamentos medicamentos) {
 		Medicamentos = medicamentos;
 	}
+
+
 
 	public String getComentarios() {
 		return comentarios;
 	}
 
+
+
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
 	}
 
-	public DetalleFormulasMedicas(com.MisterioALaOrden.consultorio.model.FormulasMedicas formulasMedicas,
-			com.MisterioALaOrden.consultorio.model.Medicamentos medicamentos, String comentarios) {
-		super();
-		FormulasMedicas = formulasMedicas;
-		Medicamentos = medicamentos;
-		this.comentarios = comentarios;
-	}
-
-
-	
 	
 }
